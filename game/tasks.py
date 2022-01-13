@@ -38,7 +38,11 @@ def load_data():
         print("Loading cricket event data for date - {}".format(dtToday))
 
         # TODO: URL, Keys should be moved to env file and sourced from environment variables for secrets.
-        url = "https://cricket-live-data.p.rapidapi.com/results-by-date/{}".format(dtToday)
+        #api_url = "https://cricket-live-data.p.rapidapi.com/results-by-date"
+        api_url = "http://localhost:3010/game-results"
+        
+        url="{}/{}".format(api_url,dtToday)
+
         headers = {
             'x-rapidapi-host': "cricket-live-data.p.rapidapi.com",
             'x-rapidapi-key': "1556516c5bmsh4d080d73a653a23p1b3381jsn483c667958c8"

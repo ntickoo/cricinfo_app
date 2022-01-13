@@ -7,8 +7,6 @@ class Game(models.Model):
     result          = models.CharField(max_length = 100)
     event_date      = models.DateField()
     title           = models.CharField(max_length = 512)
-    date_created    = models.DateTimeField(auto_now_add=True)
-    last_modified   = models.DateTimeField(auto_now=True)
 
     def __str___(self):
         return self.title

@@ -6,7 +6,7 @@ from requests.exceptions import HTTPError
 import json
 from marshmallow import Schema, fields, post_load
 from game.models import Game
-
+import os
 class GameResultDto():
     def __init__(self, id, series_id, result, date, match_title):
         self.id             = id
@@ -37,8 +37,8 @@ def load_data():
         dtToday = datetime.today().strftime('%Y-%m-%d')
         print("Loading cricket event data for date - {}".format(dtToday))
 
-        url = "http://localhost:3010/game-results"
-
+        # TODO: URL, Keys should be moved to env file and sourced from environment variables for secrets.
+        url = "https://cricket-live-data.p.rapidapi.com/results-by-date/{}".format(dtToday)
         headers = {
             'x-rapidapi-host': "cricket-live-data.p.rapidapi.com",
             'x-rapidapi-key': "1556516c5bmsh4d080d73a653a23p1b3381jsn483c667958c8"

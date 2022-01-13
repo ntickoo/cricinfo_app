@@ -8,8 +8,10 @@ authors = ["Neeraj Tickoo <ntickoo@gmail.com>"]
 python = "^3.10"
 Django = "^4.0.1"
 djangorestframework = "^3.13.1"
+python-dateutil = "^2.8.2"
 
 [tool.poetry.dev-dependencies]
+django-livereload-server = "^0.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

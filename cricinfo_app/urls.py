@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include
 
 urlpatterns = [
     path('admin/'           ,   admin.site.urls         ),
-    path('api/v0/games/'    ,   include("game.urls")    )
+    path('api/v1/game-results'    ,   include("game.urls")    )
 ]

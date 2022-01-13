@@ -39,4 +39,4 @@ def validate(date_text):
 
 def validate_event_date(date):
     if not validate(date):
-        raise ValidationError(detail="date is not in valid format YYYY-MM-DD")
+        raise ValidationError(detail="Query Param event-date is not in valid format YYYY-MM-DD")

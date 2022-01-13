@@ -1,7 +1,7 @@
 # Set up
-poetry install
-set up redis on your machine
-input your api key
+1. poetry install
+2. set up redis on your machine (used as  message broker for celery)
+3. input your api key
 
 # start web app
 poetry run python manage.py runserver

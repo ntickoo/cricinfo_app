@@ -13,6 +13,8 @@ redis = "^4.1.0"
 celery = "^5.2.3"
 requests = "^2.27.1"
 marshmallow = "^3.14.1"
+django-environ = "^0.8.1"
+python-dotenv = "^0.19.2"
 
 [tool.poetry.dev-dependencies]
 django-livereload-server = "^0.4"

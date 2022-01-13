@@ -40,9 +40,8 @@ def load_data():
         print("Loading cricket event data for date - {}".format(dtToday))
 
         api_url = str(os.getenv('CRICKET_RESULT_URL'))
+        url     = "{}/{}".format(api_url,dtToday)
 
-        url="{}/{}".format(api_url,dtToday)
-        print(url)
         headers = {
             'x-rapidapi-host': str(os.getenv('API_HOST')),
             'x-rapidapi-key': str(os.getenv('API_KEY'))
@@ -54,8 +53,8 @@ def load_data():
         jsonResponse = response.json()
 
         # Deserailize to object and save.
-        schema = GameResultSchema(unknown='EXCLUDE')
-        game_results = schema.load(jsonResponse["results"], many=True)
+        schema        = GameResultSchema(unknown='EXCLUDE')
+        game_results  = schema.load(jsonResponse["results"], many=True)
         print(game_results)
         
         for gr in game_results:

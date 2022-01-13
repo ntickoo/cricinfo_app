@@ -51,14 +51,14 @@ app.conf.beat_schedule = {
 
     #    'args': ("DjangoPY", )  
     # },
-    'download-game-data-every-5-seconds': {  
+    'download-game-data-every-30-seconds': {  
         # task name which we have created in tasks.py
 
         'task': 'load_cricket_event_data_for_today',  
         
         # set the period of running
 
-        'schedule': 5.0,  
+        'schedule': 30.0,  
         # set the args
 
     },
